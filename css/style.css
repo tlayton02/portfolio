@@ -26,8 +26,8 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: Roboto;
-  background-color: var(--dark-primary);
-  color: var(--white);
+  background-color: var(--light-primary);
+  color: var(--dark-primary);
 }
 
 /* A elements that don't have a class get default styles */
@@ -68,10 +68,10 @@ select {
 }
 
 :root {
-  --dark-primary: #232020;
+  --dark-primary: hsl(244, 24%, 26%);
   --dark-secondary: #3a3535;
   --clr-accent: #ff7315;
-  --light-primary: #f4f4f4;
+  --light-primary: hsl(258, 60%, 98%);
   --white: #ffffff;
 
   --fw-light: 300;
@@ -80,7 +80,13 @@ select {
   --fw-bold: 700;
   --fw-black: 900;
 
-  --h1: 72px;
+  --h1-size: 2.25rem;
+  --h2-size: 1.5rem;
+  --h3-size: 1.25rem;
+
+  --fs-normal: 1rem;
+  --fs-small: 0.875rem;
+  --fs-smaller: 0.813rem;
 }
 
 /* ----------Utility---------- */
@@ -88,7 +94,7 @@ select {
 /* ----------Header---------- */
 
 header {
-  display: flex;
+  display: none;
   justify-content: space-between;
   padding: 1em 3em;
   /* position: fixed; */
@@ -116,7 +122,7 @@ header {
 .nav__link {
   padding: 10px;
   text-decoration: none;
-  color: var(--white);
+  color: var(--dark-primary);
   font-weight: var(--fw-light);
   letter-spacing: 0.2rem;
   font-size: 15px;
@@ -239,43 +245,65 @@ header {
   }
 }
 
+/* SideBar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--light-primary);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  width: 110px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+}
+.sideNav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.sideNav__link {
+  font-size: 1.5rem;
+  color: var(--color-title);
+  font-weight: var(--fw-bold);
+  transition: 0.3s;
+}
+
+.sideNav__link:hover {
+  color: hsl(43, 100%, 68%);
+}
 /* ----------Main---------- */
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .main-content {
     display: block;
     height: 100vh;
-    margin: 30% auto;
     padding: 0 15px;
+    margin-left: 110px;
   }
 
   .home {
+    position: relative;
     min-height: 100vh;
     display: flex;
-    color: var(--text-black-900);
+    align-items: center;
+    justify-content: center;
+  }
+  .intro {
+    text-align: center;
   }
 
   .home .home-info {
     margin: 0 20px;
   }
 
-  h3.hello {
-    font-size: 18px;
-    margin: 15px 0;
-  }
-
-  h3.hello .name {
-    display: block;
-    font-size: 85px;
-    font-weight: 700;
-    line-height: 1;
-    text-transform: uppercase;
-    color: var(--skin-color);
-  }
-
-  h3.my-profession {
-    font-size: 20px;
-    margin: 15px 0;
-    color: var(--clr-accent);
+  .home__name {
+    font-size: var(--h1-size);
+    font-weight: var(--fw-bold);
+    margin-bottom: 0.5rem;
   }
 }
