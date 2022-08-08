@@ -312,7 +312,10 @@ header {
   .sideNav__list {
     display: flex;
     flex-direction: row;
-    column-gap: 3rem;
+    column-gap: 3.2rem;
+  }
+  .sideNav__item {
+    font-size: 20px;
   }
 }
 
