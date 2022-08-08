@@ -16,7 +16,7 @@ ol {
 }
 
 /* Set core root defaults */
-html:focus-within {
+html {
   scroll-behavior: smooth;
 }
 
@@ -258,12 +258,16 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   z-index: 10;
 }
 .sideNav__list {
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+}
+.sideNav__item {
+  text-align: center;
 }
 
 .sideNav__link {
@@ -273,9 +277,10 @@ header {
   transition: 0.3s;
 }
 
-.sideNav__link:hover {
-  color: hsl(43, 100%, 68%);
+.sideNav__item:hover {
+  color: var(--clr-accent);
 }
+
 /* ----------Main---------- */
 
 @media (min-width: 1024px) {
@@ -306,4 +311,20 @@ header {
     font-weight: var(--fw-bold);
     margin-bottom: 0.5rem;
   }
+}
+
+.services {
+  height: 100vh;
+}
+
+.portfolio {
+  height: 100vh;
+}
+
+.about {
+  height: 100vh;
+}
+
+.contact {
+  height: 100vh;
 }
