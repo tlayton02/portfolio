@@ -31,7 +31,6 @@ window.addEventListener("scroll", function () {
 
   lastScrollTop = scrollTop; //New Position Stored
 });
-
 // Smooth Scroll
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll(".sideNav div ul li");
