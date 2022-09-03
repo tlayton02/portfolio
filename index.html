@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script
-      src="https://kit.fontawesome.com/824cfbc7f8.js"
-      crossorigin="anonymous"
-    ></script>
     <title>Tom Layton</title>
+    <!-- CSS Link-->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
   </head>
+
   <body>
     <!-- Header -->
     <header>
@@ -22,25 +20,43 @@
       </button>
       <nav class="nav" id="navbar">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
           <li class="nav__item">
-            <a href="#portfolio" class="nav__link">My Work</a>
+            <a href="javascript:mySlider.gotoSlide('#home');" class="nav__link"
+              >Home</a
+            >
           </li>
           <li class="nav__item">
-            <a href="#services" class="nav__link">Services</a>
+            <a
+              href="javascript:mySlider.gotoSlide('#services');"
+              class="nav__link"
+              >Services</a
+            >
           </li>
           <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact Me</a>
+            <a
+              href="javascript:mySlider.gotoSlide('#portfolio');"
+              class="nav__link"
+              >Portfolio</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="javascript:mySlider.gotoSlide('#about');" class="nav__link"
+              >About</a
+            >
+          </li>
+          <li class="nav__item">
+            <a
+              href="javascript:mySlider.gotoSlide('#contact');"
+              class="nav__link"
+              >Contact Me</a
+            >
           </li>
         </ul>
       </nav>
     </header>
     <!-- Header End -->
-
-    <!-- Main Content -->
-    <div class="main-content">
-      <!-- Home Section -->
-      <section class="home section gradient__bg-linear" id="home">
+    <div class="slides">
+      <section class="home" id="home">
         <div class="intro container">
           <div class="home-info">
             <h1 class="home__name">Tom Layton</h1>
@@ -48,78 +64,23 @@
           </div>
         </div>
       </section>
-      <section class="services section bg-color" id="services">
-        <div class="container">
-          <div class="section__heading">
-            <h1 class="">Services</h1>
-          </div>
-          <div class="row">
-            <div class="service-block">
-              <div class="service-block-content">
-                <i class="fa-solid fa-code"></i>
-                <h3>Placeholder</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Natus, obcaecati!
-                </p>
-              </div>
-            </div>
-            <div class="service-block">
-              <div class="service-block-content">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <h3>Placeholder</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Natus, obcaecati!
-                </p>
-              </div>
-            </div>
-            <div class="service-block">
-              <div class="service-block-content">
-                <i class="fa-solid fa-desktop"></i>
-                <h3>Placeholder</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Natus, obcaecati!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="portfolio section bg-color" id="portfolio">
-        <div class="section__heading">
-          <h1 class="">Previous Work</h1>
-        </div>
-      </section>
-
-      <section class="about section bg-color" id="about">
-        <div class="section__heading">
-          <h1 class="">About</h1>
-        </div>
-      </section>
-
-      <section class="contact section bg-color" id="contact">
-        <div class="section__heading">
-          <h1 class="">Contact</h1>
-        </div>
-      </section>
+      <section id="services" id="services"><span>Services</span></section>
+      <section id="portfolio" id="portfolio"><span>Portfolio</span></section>
+      <section id="about" id="about"><span>About</span></section>
+      <section id="contact" id="contact"><span>Contact</span></section>
     </div>
     <!-- Main Content End -->
-    <!-- Footer -->
-    <footer class="footer">
-      <div>
-        <ul class="footer-list">
-          <li>Portfolio</li>
-          <li>Services</li>
-          <i class="fa-solid fa-cog fa-spin"></i>
-        </ul>
-      </div>
-    </footer>
-    <!-- Footer End -->
 
-    <!-- JS -->
-    <script src="js/index.js"></script>
+    <!-- Scripts -->
+    <script src="./js/slider.js"></script>
+    <script
+      src="https://kit.fontawesome.com/824cfbc7f8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
+    <script>
+      var mySlider = slider(".slides");
+    </script>
+    <!-- Scripts end -->
   </body>
 </html>
