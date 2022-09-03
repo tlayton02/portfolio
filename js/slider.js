@@ -78,7 +78,6 @@ var slider = function (sliderElement) {
     var touchStopPos = 0;
     var touchMinLength = 10;
     document.addEventListener("touchstart", function (e) {
-      e.preventDefault();
       if (
         e.type == "touchstart" ||
         e.type == "touchmove" ||
@@ -90,7 +89,6 @@ var slider = function (sliderElement) {
       }
     });
     document.addEventListener("touchend", function (e) {
-      e.preventDefault();
       if (
         e.type == "touchstart" ||
         e.type == "touchmove" ||
