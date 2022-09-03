@@ -51,3 +51,21 @@ window.onscroll = () => {
     }
   });
 };
+
+$(window).on("touchstart", function (e) {
+  startY = e.originalEvent.changedTouches[0].pageY;
+});
+
+if (useEventListener) {
+  window.addEventListener(
+    "touchmove",
+    function (e) {
+      var currentY = e.changedTouches[0].pageY;
+      if ($(window).scrollTop() <= 0 && startY <= currentY) {
+        e.preventDefault();
+        return false;
+      }
+    },
+    { passive: false }
+  );
+}
