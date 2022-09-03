@@ -76,7 +76,7 @@ var slider = function (sliderElement) {
     // stuff for touch devices
     var touchStartPos = 0;
     var touchStopPos = 0;
-    var touchMinLength = 10;
+    var touchMinLength = 1;
     document.addEventListener("touchstart", function (e) {
       if (
         e.type == "touchstart" ||
