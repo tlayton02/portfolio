@@ -335,18 +335,10 @@ header {
   align-items: center;
   justify-content: center;
 }
-.intro {
-  text-align: center;
-}
 
 .home-info {
   text-align: left;
-}
-
-.home__description {
-  margin: 20px 0 0;
-  color: var(--clr-accent);
-  font-size: 16px;
+  padding: 30px;
 }
 
 .home__name {
@@ -354,8 +346,14 @@ header {
   font-weight: var(--fw-bold);
   color: #fff;
   margin-bottom: 0.5rem;
+  line-height: 80px;
 }
 
+.home__description {
+  margin: 20px 0 0;
+  color: var(--clr-accent);
+  font-size: 16px;
+}
 @media (min-width: 1024px) {
   .main-content {
     display: block;
