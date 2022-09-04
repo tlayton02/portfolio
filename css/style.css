@@ -291,7 +291,7 @@ header {
 .container {
   max-width: 1200px;
   margin-inline: auto;
-  padding-inline: 25px;
+  padding-inline: 35px;
 }
 
 .row {
@@ -438,6 +438,7 @@ header {
 form {
   display: flex;
   flex-direction: column;
+  padding: 15px;
 }
 
 .form__row-2 {
@@ -448,4 +449,16 @@ form {
 
 .form__row {
   margin-bottom: 25px;
+}
+
+.form__row textarea {
+  min-height: 150px;
+}
+
+.form__button {
+  padding: 10px;
+  border: none;
+  background-color: var(--clr-accent);
+  color: #fff;
+  border-radius: 5px;
 }
