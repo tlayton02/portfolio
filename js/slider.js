@@ -44,7 +44,7 @@ var slider = function (sliderElement) {
               window.location.hash = document.querySelector(
                 '[data-slider-index="' + currentSlide + '"]'
               ).id;
-            }, 400);
+            }, 10);
           }
         });
 
