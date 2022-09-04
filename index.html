@@ -4,10 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tom Layton</title>
+
+    <!-- JS -->
+    <script src="./js/slider.js"></script>
+    <script src="./js/index.js"></script>
     <!-- CSS Link-->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/slider.css" />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/inobounce/0.2.0/inobounce.js"></script>
+    <script
+      src="https://kit.fontawesome.com/824cfbc7f8.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -19,6 +28,7 @@
       <button class="nav-toggle" aria-label="toggle navigation">
         <span class="hamburger"></span>
       </button>
+
       <nav class="nav" id="navbar">
         <ul class="nav__list">
           <li class="nav__item">
@@ -56,33 +66,94 @@
       </nav>
     </header>
     <!-- Header End -->
+
     <div class="slides">
+      <!-- Home -->
       <section class="home" id="home">
         <div class="intro container">
           <div class="home-info">
             <h1 class="home__name">Tom Layton</h1>
-            <span class="home__description">Front-End Web Developer</span>
+            <p class="home__description">Front-End Web Developer</p>
           </div>
         </div>
       </section>
-      <section id="services" id="services"><span>Services</span></section>
-      <section id="portfolio" id="portfolio"><span>Portfolio</span></section>
-      <section id="about" id="about"><span>About</span></section>
-      <section id="contact" id="contact"><span>Contact</span></section>
+      <!-- Services -->
+      <section id="services" id="services">
+        <div class="vertical_header fade-title"><span>services</span></div>
+        <div class="container">
+          <h2 class="section__header">My Services</h2>
+          <section>
+            <div class="service__block_container">
+              <div class="service__block">
+                <i class="fa-solid fa-code"></i>
+                <p class="service__block_heading">Development</p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
+                  odio ad alias earum nam dolorum commodi, odit quis nulla ab.
+                </p>
+              </div>
+              <div class="service__block">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="service__block_heading">E-commerce</p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
+                  odio ad alias earum nam dolorum commodi, odit quis nulla ab.
+                </p>
+              </div>
+              <div class="service__block">
+                <i class="fa-sharp fa-solid fa-object-group"></i>
+                <p class="service__block_heading">Web Design</p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. A
+                  odio ad alias earum nam dolorum commodi, odit quis nulla ab.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <!-- Portfolio -->
+      <section id="portfolio" id="portfolio">
+        <div class="vertical_header"><span>portfolio</span></div>
+        <div class="container">
+          <h2 class="section__header">Portfolio</h2>
+        </div>
+      </section>
+      <!-- About -->
+      <section id="about" id="about">
+        <div class="vertical_header"><span>about</span></div>
+        <div class="container">
+          <h2 class="section__header">About</h2>
+        </div>
+      </section>
+      <!-- Contact -->
+      <section id="contact" id="contact">
+        <div class="vertical_header"><span>contact</span></div>
+        <div class="container">
+          <h2 class="section__header">Contact</h2>
+          <div>
+            <form action="">
+              <div class="form__row form__row-2">
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+              </div>
+              <div class="form__row">
+                <input type="text" placeholder="Subject" />
+              </div>
+              <div class="form__row">
+                <textarea name="message" id="" plZZ></textarea>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- Main Content End -->
 
     <!-- Scripts -->
-    <script src="./js/slider.js"></script>
-    <script
-      src="https://kit.fontawesome.com/824cfbc7f8.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/index.js"></script>
     <script>
       var mySlider = slider(".slides");
     </script>
-
     <!-- Scripts end -->
   </body>
 </html>
