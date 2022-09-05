@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tom Layton</title>
-
-    <!-- JS -->
-    <script src="./js/slider.js"></script>
-    <script src="./js/index.js"></script>
     <!-- CSS Link-->
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/slider.css" />
+    <link rel="stylesheet" href="./css/jquery.pagepiling.css" />
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.pagepiling.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/inobounce/0.2.0/inobounce.js"></script>
     <script
@@ -31,55 +32,39 @@
 
       <nav class="nav" id="navbar">
         <ul class="nav__list">
-          <li class="nav__item">
-            <a href="javascript:mySlider.gotoSlide('#home');" class="nav__link"
-              >Home</a
-            >
+          <li data-menuanchor="firstPage" class="nav__item">
+            <a href="#home" class="nav__link">Home</a>
           </li>
-          <li class="nav__item">
-            <a
-              href="javascript:mySlider.gotoSlide('#services');"
-              class="nav__link"
-              >Services</a
-            >
+          <li data-menuanchor="secondPage" class="nav__item">
+            <a href="#services" class="nav__link">Services</a>
           </li>
-          <li class="nav__item">
-            <a
-              href="javascript:mySlider.gotoSlide('#portfolio');"
-              class="nav__link"
-              >Portfolio</a
-            >
+          <li data-menuanchor="thirdPage" class="nav__item">
+            <a href="#portfolio" class="nav__link">Portfolio</a>
           </li>
-          <li class="nav__item">
-            <a href="javascript:mySlider.gotoSlide('#about');" class="nav__link"
-              >About</a
-            >
+          <li data-menuanchor="fourthPage" class="nav__item">
+            <a href="#about" class="nav__link">About</a>
           </li>
-          <li class="nav__item">
-            <a
-              href="javascript:mySlider.gotoSlide('#contact');"
-              class="nav__link"
-              >Contact Me</a
-            >
+          <li data-menuanchor="fifthPage" class="nav__item">
+            <a href="#contact" class="nav__link">Contact Me</a>
           </li>
         </ul>
       </nav>
     </header>
     <!-- Header End -->
 
-    <div class="slides">
+    <div id="pagepiling">
       <!-- Home -->
-      <section class="home" id="home">
+      <div class="home section" id="home">
         <div class="intro container">
           <div class="home-info">
             <h1 class="home__name">Tom Layton</h1>
             <p class="home__description">Front-End Web Developer</p>
           </div>
         </div>
-      </section>
+      </div>
 
       <!-- Services -->
-      <section id="services" id="services">
+      <div class="services section pp-scrollable" id="services">
         <div class="vertical_header fade-title"><span>services</span></div>
         <div class="container">
           <h2 class="section__header">My Services</h2>
@@ -95,7 +80,7 @@
                   </p>
                 </div>
               </div>
-              <div class="service__block">
+              <div class="service__block slide-scrollable">
                 <div class="service__block_content">
                   <i class="fa-solid fa-cart-shopping"></i>
                   <p class="service__block_heading">E-commerce</p>
@@ -118,26 +103,26 @@
             </div>
           </section>
         </div>
-      </section>
+      </div>
 
       <!-- Portfolio -->
-      <section id="portfolio" id="portfolio">
+      <div class="portfolio section" id="portfolio">
         <div class="vertical_header"><span>portfolio</span></div>
         <div class="container">
           <h2 class="section__header">Portfolio</h2>
         </div>
-      </section>
+      </div>
 
       <!-- About -->
-      <section id="about" id="about">
+      <div class="about section" id="about">
         <div class="vertical_header"><span>about</span></div>
         <div class="container">
           <h2 class="section__header">About</h2>
         </div>
-      </section>
+      </div>
 
       <!-- Contact -->
-      <section id="contact" id="contact">
+      <div class="contact section" id="contact">
         <div class="vertical_header"><span>contact</span></div>
         <div class="container">
           <h2 class="section__header">Contact</h2>
@@ -163,13 +148,21 @@
             </form>
           </div>
         </div>
-      </section>
+      </div>
     </div>
     <!-- Main Content End -->
 
     <!-- Scripts -->
     <script>
       var mySlider = slider(".slides");
+    </script>
+    <script>
+      $(document).ready(function () {
+        $("#pagepiling").pagepiling({
+          verticalCentered: false,
+          css3: false,
+        });
+      });
     </script>
     <!-- Scripts end -->
   </body>

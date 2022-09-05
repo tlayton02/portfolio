@@ -9,6 +9,28 @@
   padding: 0;
 }
 
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--clr-accent);
+  opacity: 0.01;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-secondary);
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul,
 ol {
@@ -93,6 +115,26 @@ textarea {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+#home {
+  background-color: #1b1b1b;
+}
+
+#services {
+  background-color: #1c1b20;
+}
+
+#portfolio {
+  background-color: #1b1b1b;
+}
+
+#about {
+  background-color: #1c1b20;
+}
+
+#contact {
+  background-color: #1b1b1b;
 }
 
 :root {
@@ -284,8 +326,12 @@ header {
 }
 
 .section {
-  overflow: hidden;
-  position: relative;
+  /* the important one*/
+  background-attachment: fixed;
+
+  background-size: auto 80%;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -459,4 +505,5 @@ form {
   background-color: var(--clr-accent);
   color: #fff;
   border-radius: 5px;
+  width: 50%;
 }
