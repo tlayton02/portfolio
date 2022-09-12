@@ -44,7 +44,8 @@ html {
 
 /* Set core body defaults */
 body {
-  overscroll-behavior-y: contain;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
